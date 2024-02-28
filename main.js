@@ -23,9 +23,7 @@ addBtn.addEventListener('click', (e) => {
 });
 
 //agregar funcion de eliminar tarea al boton
-btnDelete.addEventListener('click', (e)=>{
-        e.remove();
-} )
+
 
 
 
