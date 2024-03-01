@@ -11,19 +11,27 @@ addBtn.addEventListener('click', (e) => {
 
     const li = document.createElement('li');
     const p = document.createElement('p');
-    const btnDelete = document.createElement('button')
     p.textContent =text;
 
 
     li.appendChild(p);
     ul.appendChild(li);
-    p.appendChild(btnDelete);
+    li.appendChild(btnDelete);
     input.value='';
     empty.style.display='none';
+    
 });
 
-//agregar funcion de eliminar tarea al boton
+//boton eliminar tareas
 
+const btnDelete = document.createElement("button");
+btnDelete.textContent='X';
+
+
+btnDelete.addEventListener('click', () =>{
+    li.remove();
+}); 
+    
 
 
 
