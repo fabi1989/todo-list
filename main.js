@@ -2,6 +2,7 @@ const input = document.querySelector('input');
 const addBtn = document.querySelector('.btn-add');
 const ul = document.querySelector('ul');
 const empty = document.querySelector('.vacio');
+var index = 0;
 
 
 addBtn.addEventListener('click', (e) => {
@@ -19,6 +20,8 @@ addBtn.addEventListener('click', (e) => {
     li.appendChild(btnDelete);
     input.value='';
     empty.style.display='none';
+    li.setAttribute("id",index)
+    index++;
     
 });
 
