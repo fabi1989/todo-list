@@ -17,7 +17,7 @@ addBtn.addEventListener('click', (e) => {
 
     li.appendChild(p);
     ul.appendChild(li);
-    li.appendChild(btnDelete);
+    li.appendChild(addDelete());
     input.value='';
     empty.style.display='none';
     li.setAttribute("id",index)
@@ -26,16 +26,18 @@ addBtn.addEventListener('click', (e) => {
 });
 
 //boton eliminar tareas
+function addDelete(){
+    const btnDelete = document.createElement("button");
+    btnDelete.textContent='X';
+  
 
-const btnDelete = document.createElement("button");
-btnDelete.textContent='X';
+    btnDelete.addEventListener('click', (event) =>{
+        const item = event.target.parentElement;
+        ul.removeChild(item);
 
-
-btnDelete.addEventListener('click', () =>{
-    li.remove();
-}); 
-    
-
+})
+return btnDelete;
+}
 
 
 
