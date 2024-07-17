@@ -1,6 +1,7 @@
 import './App.css';
 import { InputCompo } from './componentes/inputCompo';
 
+
 function App() {
   return (
     <div className="App">
